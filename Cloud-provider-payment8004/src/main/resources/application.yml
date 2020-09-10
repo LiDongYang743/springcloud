@@ -1,0 +1,11 @@
+server:
+  port: 8004
+
+
+spring:
+  application:
+    name: Cloud-provider-payment
+  cloud:
+    zookeeper:
+#  默认localhost:2181
+      connect-string: 192.168.56.102:2181
