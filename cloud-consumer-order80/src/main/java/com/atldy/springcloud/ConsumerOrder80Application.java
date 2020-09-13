@@ -10,7 +10,7 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
  * @create 2020-08-29 17:49
  */
 @SpringBootApplication
-@RibbonClient(name = "CLOUD-PAYMENT-SERVICE",configuration = MyIrule.class)
+//@RibbonClient(name = "CLOUD-PAYMENT-SERVICE",configuration = MyIrule.class)
 public class ConsumerOrder80Application {
 
     public static void main(String[] args) {
