@@ -3,7 +3,6 @@ package com.atldy.springcloud;
 import com.atldy.myirule.MyIrule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
 /**
  * @author 唐多山

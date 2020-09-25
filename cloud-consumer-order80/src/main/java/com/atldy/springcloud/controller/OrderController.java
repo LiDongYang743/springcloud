@@ -3,7 +3,6 @@ package com.atldy.springcloud.controller;
 import com.atldy.springcloud.domain.CommonResult;
 import com.atldy.springcloud.domain.Payment;
 import com.atldy.springcloud.lb.Loadbalancer;
-import com.netflix.discovery.converters.Auto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -59,5 +58,12 @@ public class OrderController {
         return restTemplate.getForObject(uri+"/payment/lb",String.class);
     }
 
+    // ====================> zipkin+sleuth
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin()
+    {
+        String result = restTemplate.getForObject("http://localhost:8001"+"/payment/zipkin/", String.class);
+        return result;
+    }
 
 }

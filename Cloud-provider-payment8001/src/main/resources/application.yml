@@ -6,6 +6,12 @@ spring:
   application:
     # 注册到Eureka的名称
     name: Cloud-payment-service
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      # 采样率值介于o到1之间，1则表示全部采集
+      probability: 1
   datasource:
     username: root
     password: root
